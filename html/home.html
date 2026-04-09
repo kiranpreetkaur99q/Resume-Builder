@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Resume</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link href="../css/index.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>Dream Resume: Journey beyond ordinary</h1>
+        <nav>
+            <a href="#">Help?</a>
+            <a href="#">info</a>
+        </nav>
+    </header>
+    <main>
+        <div class="intro">
+            <p>Heading towards a job? Take the first step with us.</p>
+            <button class="start">Start with us</button>
+        </div>
+    </main>
+    <audio id="buttonClick" src="../audio/buttonClick.wav" preload="auto"></audio>
+
+    <script>
+
+        document.addEventListener("click", function (e) {
+            if (e.target.tagName == "BUTTON") {
+                let buttonAudio = document.getElementById("buttonClick");
+                buttonAudio.currentTime = 0;
+                buttonAudio.play();
+            }
+        });
+        let start = document.getElementsByClassName("start")[0];
+        function goGenderPage() {
+            window.location.href = "gender.html";
+        }
+        start.onclick = goGenderPage;
+    </script>
+</body>
+
+</html>

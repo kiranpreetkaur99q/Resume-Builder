@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Select a template</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Flavors&family=Honk&family=Nosifer&family=Princess+Sofia&display=swap"
+        rel="stylesheet">
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../css/tamplate.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1 class="princess-sofia-regular">
+        Select a template </h1>
+
+    <div class="galaxy" onclick="goToGalaxyTheme()">
+        <img src="../images/galaxy.png" alt="">
+        <h2>Galaxy</h2>
+    </div>
+    <div class="city" onclick="goToCarTheme()">
+        <img src="../images/city.jpeg" alt="">
+
+        <h2>Futuristic City</h2>
+    </div>
+    <button id="prevBtn">Go to Previous Page</button>
+    <audio id="buttonClick" src="../audio/buttonClick.wav" preload="auto"></audio>
+
+
+    <script src="../js/template.js" defer>
+    </script>
+</body>
+
+</html>

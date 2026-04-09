@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Resume</title>
+    <script src="https://kit.fontawesome.com/8ab17d6765.js" crossorigin="anonymous"></script>
+
+    <style>
+     body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-image: url(../images/spaceImg.jpg);
+            background-position: center;
+        }
+
+        video {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 80%;
+            max-width: 80%;
+            min-height: 100%;
+            position: fixed;
+        }
+        .fa-play{
+            position: fixed;
+            margin: 2%;
+            font-size: 5vw;
+            z-index: 1;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <i class="fa-solid fa-play">sound</i>
+    <video autoplay muted>
+        <source src="" type="video/mp4">
+    </video>
+    <script>
+        //    Reference  https://www.w3schools.com/jsref/prop_win_localstorage.asp
+        let videoSrc;
+        if (localStorage.getItem("gender") === "male") {
+            videoSrc = "../video/galaxyMale.MOV";
+        }
+        else if (localStorage.getItem("gender") === "female") {
+            videoSrc = "../video/galaxyFemale.MP4";
+        }
+        let video = document.getElementsByTagName("video")[0];
+        video.querySelector("source").src = videoSrc;
+
+        video.addEventListener("ended", function () {
+            window.location.href = "galaxyJourney.html";
+        });
+        let icon = document.getElementsByTagName("i")[0];
+        let count = 0;
+        icon.addEventListener("click", function(){
+            if(count%2 === 0){
+                video.muted = false;
+                icon.style.opacity="0.2";
+                count++;
+            }else{
+                video.muted = true;
+                icon.style.opacity="1";
+                count++;
+            }
+        })
+    </script>
+</body>
+
+</html>

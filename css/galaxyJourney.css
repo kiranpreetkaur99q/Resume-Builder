@@ -1,0 +1,356 @@
+#planet-message{
+    font-size: 4.5vw;
+    font-family: 'Dynapuff', cursive;
+    color: white;
+    text-align: center;
+}
+#planetMessage{
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    padding: 0.5vw 2.5vw 2vw;
+    background: rgba(0, 0, 0, 0.75);
+
+    border: 0.25vw solid skyblue;
+    border-radius: 1vw;
+
+    box-shadow: 0 0 20px skyblue, 0 0 40px blue inset;
+
+    display: none; /* Hidden by default */
+    opacity: 0;
+    z-index: 2000;
+
+    /* Only pop-in once, stays after */
+    animation: popupFloat 0.4s ease-out forwards;
+}
+#continue{
+    width: 50%;
+}
+@keyframes popupFloat {
+    from {
+        transform: translateX(-50%) scale(0.6);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+}
+
+
+div {
+    width: 50%;
+    height: 70%;
+}
+
+@keyframes movingToLeft {
+    0% {
+        left: 130%;
+        top: -30%;
+    }
+    100% {
+        left: -30%;
+        top: 130%;
+    }
+}
+
+@keyframes movingMeteoritesToLeft1 {
+    0% {
+        left: 80%;
+        top: -15%;
+    }
+
+    100% {
+        left: -15%;
+        top: 45%;
+    }
+}
+
+@keyframes movingMeteoritesToLeft2 {
+    0% {
+        left: 115%;
+        top: 45%;
+    }
+
+    100% {
+        left: 45%;
+        top: 115%;
+    }
+}
+
+
+@keyframes movingToRight {
+    0% {
+        left: 0%;
+        top: 100%;
+    }
+
+    100% {
+        left: 30%;
+        top: 70%;
+    }
+}
+
+@keyframes movingToRightEnd {
+    0% {
+
+        left: 30%;
+        top: 70%;
+
+    }
+
+    100% {
+        left: 140%;
+        top :0%;
+
+    }
+}
+
+
+
+@keyframes movingToCenter {
+    0% {
+        left: 107.5%;
+        top: -20%;
+    }
+
+    100% {
+        left: 60%;
+        top: 40%;
+    }
+}
+
+@keyframes movingPlanetsToCenter {
+    0% {
+        left: 130%;
+        top: -30%;
+    }
+
+    100% {
+        left: 70%;
+        top: 30%;
+    }
+}
+
+@keyframes movingFromCenter {
+    0% {
+        left: 60%;
+        top: 40%;
+    }
+
+    100% {
+        left: -17.5%;
+        top: 120%;
+    }
+}
+
+@keyframes movingPlanetsFromCenter {
+    0% {
+        left: 70%;
+        top: 30%;
+    }
+
+    100% {
+        left: -30%;
+        top: 130%;
+    }
+}
+
+#rocket {
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 90%;
+    z-index: 5;
+    position: absolute;
+    animation: movingToRight 7s linear forwards;
+
+}
+
+.spaceObjects {
+    transform: translate(-50%, -50%);
+    top: -30%;
+    left: 130%;
+    height: 60%;
+    width: 40%;
+    z-index: 2;
+    position: absolute;
+    animation: spin 4s linear infinite;
+    transform-style: preserve-3d;
+}
+
+.rotate {
+    position: absolute;
+    transform: translate(-50%, -50%);  
+}
+.meteorites {
+    transform: translate(-50%, -50%);
+    top: -15%;
+    height: 30%;
+    width: 30%;
+    z-index: 0;
+    position: absolute;
+    
+}
+
+#meteorite {
+    left: 70%;
+    animation: movingMeteoritesToLeft1 4s linear 2s infinite;
+}
+
+#stones {
+    left: 115%;
+    top: 45%;
+    animation: movingMeteoritesToLeft2 5s linear 5s infinite;
+}
+
+#planet1 {
+    animation: movingToLeft 5s linear;
+}
+
+#planet2 {
+    animation: movingToLeft 5s linear 5s;
+}
+
+#saturn {
+
+    animation: movingPlanetsToCenter 5s linear 10s forwards;
+    width: 60%;
+
+}
+
+#moon {
+    width: 40%;
+}
+.characters {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: -20%;
+    left: 107.5%;
+    height: 40%;
+    width: 15%;
+    z-index: 4;
+}
+
+#alian {
+    animation: movingToCenter 5s linear 10s forwards;
+}
+
+
+
+#astronaut {
+    height: 40%;
+}
+
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+#collectInfoScene{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    perspective: 800px; 
+
+}
+
+body,
+html {
+    margin: 0%;
+    padding: 0%;
+}
+
+form {
+    z-index: 6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+input,
+input::placeholder,
+button {
+    font-family: "Preahvihear", sans-serif;
+    font-size: 2vw;
+}
+
+textarea,
+textarea::placeholder {
+    font-family: "Preahvihear", sans-serif;
+    font-size: 1vw;
+}
+
+input {
+    width: 120%;
+    margin-bottom: 2%;
+}
+
+textarea {
+    margin-bottom: 2%;
+}
+
+button {
+    border-radius: 50%;
+}
+
+label {
+    font-family: "DynaPuff", system-ui;
+    font-size: 6vw;
+    color: black;
+    -webkit-text-stroke-color: rgb(75, 75, 252);
+    -webkit-text-stroke-width: 0.3vw;
+    margin-bottom: 5%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+    border-color: rgb(44, 40, 19);
+}
+
+.dynapuff {
+    font-family: "DynaPuff", system-ui;
+}
+
+.preahvihear-regular {
+    font-family: "Preahvihear", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+#enableSound {
+    position: absolute;
+    z-index: 2;
+    top: 5%;
+    left: 5%;
+    width: 10%;
+    border: none;
+    border-radius: 0.5em;
+    background-color: silver;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+input[type="checkbox"] {
+    width: 1.3em;
+    height: 1.3em;
+    accent-color: silver;
+    cursor: pointer;
+}

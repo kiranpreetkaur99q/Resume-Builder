@@ -1,0 +1,105 @@
+        body {
+            margin: 0;
+            padding: 0;
+            background: darkblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: "Arial", sans-serif;
+            color: #fff;
+        }
+
+        .resume-container {
+            background: #0d133d;
+            /* darker container */
+            color: #fff;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 20px;
+            padding: 30px 50px;
+            box-sizing: border-box;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 3px solid #ff6f61;
+            /* coral accent */
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            color: #ff6f61;
+            /* coral */
+            margin: 0;
+        }
+
+        header p {
+            font-style: italic;
+            color: #00ffff;
+            /* cyan */
+            margin: 5px 0 0 0;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1em;
+            color: #b3ffff;
+            /* soft cyan */
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            border-left: 5px solid #ff6f61;
+            padding-left: 10px;
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #b3ffff;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin: 5px 0;
+            color: #00ffff;
+        }
+
+        #downloadPdf {
+            display: block;
+            margin: 20px auto 0;
+            padding: 12px 25px;
+            background: #ff6f61;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: 0.3s;
+            text-align: center;
+            width: fit-content;
+        }
+
+        #downloadPdf:hover {
+            background: #ff8577;
+            transform: scale(1.05);
+        }
+
+        /* refernce https://stackoverflow.com/questions/16894683/how-to-print-html-content-on-click-of-a-button-but-not-the-page */
+        @media print {
+            .notDisplay {
+                display: none !important;
+            }
+        }

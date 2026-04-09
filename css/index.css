@@ -1,0 +1,78 @@
+body {
+    height: 100vh;
+    color: white;
+   
+}
+
+
+header {
+    position: absolute;
+    align-items: center;
+    top: 20px;
+    left: 40px;
+    right: 40px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header h1 {
+    font-size:3rem;
+}
+
+header nav a {
+    margin-left: 25px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+        font-size:2rem;
+
+}
+
+header nav a:hover {
+    color: white;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.intro p {
+    font-size: 2rem;
+    max-width: 700px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 5s ease forwards;
+}
+
+
+
+.start {
+    margin-top: 50px;
+    padding: 15px 40px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    transition: all 3s ease;
+    opacity: 0;
+    animation: buttonFade 1.5s ease forwards;
+    animation-delay: 4s;
+}
+
+.start:hover {
+    background: rgba(167, 161, 161, 0.3);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+    font-size: 1.60rem;
+    transform: scale(6.05);
+}

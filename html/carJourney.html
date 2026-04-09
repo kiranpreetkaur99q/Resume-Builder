@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Preahvihear&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/carJourney.css">
+    <title>CAR JOURNEY </title>
+</head>
+
+<body>
+    <audio id="backSound" src="../audio/carJourneySound.mp3" autoplay loop muted preload="auto"></audio>
+
+    <div id="collectInfoScene">
+
+        <video src="../video/Clouds Green Screen _ Clouds Effect(4).mp4" loop autoplay muted></video>
+        <img id="road" src="../images/road.jpg">
+
+        <img id="car" src="">
+
+        <img id="city1" class="buildings" src="../images/buildings.png">
+        <img id="city2" class="buildings" src="../images/buildings.png">
+        <img id="policeOffice" class="buildings" src="../images/policeOffice.png">
+        <img id="policeMan" class="importantThings" src="../images/policeMan.png">
+        <img id="school" class="buildings" src="../images/school.png">
+        <img id="office" class="buildings" src="../images/office.png">
+
+        <img id="talentShow" class="buildings" src="../images/talentShow.jpg">
+        <img id="dreamTower" class="buildings" src="../images/dreamTower.png">
+
+        <form style="opacity: 0">
+            <label for="username">What's your name?</label>
+            <input type="text" id="username" name="username" placeholder="Type your name" required>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+    <audio id="buttonClick" src="../audio/buttonClick.wav" preload="auto"></audio>
+    <button id="enableSound"> Sound</button>
+    <script src="../js/carGalaxyBothCommon.js" defer></script>
+
+    <script src="../js/carJourney.js" defer></script>
+</body>
+
+</html>

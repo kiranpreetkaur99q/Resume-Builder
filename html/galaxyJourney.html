@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Preahvihear&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/galaxyJourney.css">
+    <title>GALAXY JOURNEY</title>
+</head>
+
+<body>
+
+
+
+    <audio id="backSound" src="../audio/galaxy.mp3" autoplay loop muted preload="auto"></audio>
+    <div id="collectInfoScene">
+
+        <video src="../video/galaxy.mp4" loop autoplay muted></video>
+
+        <img id="rocket" src="">
+
+        <img id="stones" class="meteorites" src="../images/stones.png">
+        <img id="meteorite" class="meteorites" src="../images/meteorite.png">
+        <img id="planet1" class="spaceObjects" src="../images/planet1.png">
+        <img id="planet2" class="spaceObjects" src="../images/planet2.png">
+
+        <img id="saturn" class="spaceObjects" src="../images/saturn.png">
+        
+        <img id="alian" class="characters" src="../images/ailian.png">
+        <img id="jupitor" class="spaceObjects" src="../images/jupitor-full.png">
+        <img id="mars" class="spaceObjects" src="../images/mars-full.png">
+        <img id="astronaut" class="characters" src="../images/astronaut.png">
+        <img id="moon" class="spaceObjects" src="../images/moon.png">
+        <img id="sun" class="spaceObjects" src="../images/sun.png">
+
+        <div id="planetMessage">
+            <p id="planet-message"></p>
+            <button id="continue">continue</button>
+        </div>
+
+        <form style="opacity: 0">
+            <label for="username">What's your name?</label>
+            <input type="text" id="username" name="username" placeholder="Type your name" required>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+    <audio id="buttonClick" src="../audio/buttonClick.wav" preload="auto"></audio>
+    <button id="enableSound"> Sound</button>
+
+    <script src="../js/carGalaxyBothCommon.js" defer></script>
+
+    <script src="../js/galaxyJourney.js" defer></script>
+</body>
+
+</html>
